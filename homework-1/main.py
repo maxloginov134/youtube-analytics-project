@@ -1,10 +1,5 @@
 from src.channel import Channel
-import os
-from googleapiclient.discovery import build
 
-api_key: str = os.getenv('YT_API_KEY')
-youtube = build('youtube', 'v3', developerKey=api_key)
-channel = youtube.channels().list(part='snippet,statistics').execute()
 
 if __name__ == '__main__':
     vdud = Channel('UCMCgOm8GZkHp8zJ6l7_hIuA')
