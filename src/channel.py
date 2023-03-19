@@ -36,3 +36,8 @@ class Channel:
 
         with open(filename, "w") as file:
             json.dump(json_object, file, indent=4)
+
+    @classmethod
+    def get_service(cls):
+        return cls.youtube
+
