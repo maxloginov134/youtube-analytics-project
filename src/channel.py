@@ -37,6 +37,18 @@ class Channel:
         with open(filename, "w") as file:
             json.dump(json_object, file, indent=4)
 
+    def __str__(self):
+        return f"{self.title} ({self.url})"
+
+    def __add__(self, other):
+        return self.subscribers_count + other.subscribers_count
+
+    def __sub__(self, other):
+        return self.subscribers_count - other.subscribers_count
+
+    def __le__(self, other):
+        return self.subscribers_count <= other.subscribers_count
+
     @classmethod
     def get_service(cls):
         return cls.youtube
