@@ -49,6 +49,15 @@ class Channel:
     def __ge__(self, other):
         return self.subscribers_count >= other.subscribers_count
 
+    def __le__(self, other):
+        return self.subscribers_count <= other.subscribers_count
+
+    def __lt__(self, other):
+        return self.subscribers_count < other.subscribers_count
+
+    def __gt__(self, other):
+        return self.subscribers_count > other.subscribers_count
+
     @classmethod
     def get_service(cls):
         return cls.youtube
