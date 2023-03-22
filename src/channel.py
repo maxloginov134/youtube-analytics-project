@@ -46,8 +46,8 @@ class Channel:
     def __sub__(self, other):
         return self.subscribers_count - other.subscribers_count
 
-    def __le__(self, other):
-        return self.subscribers_count <= other.subscribers_count
+    def __ge__(self, other):
+        return self.subscribers_count >= other.subscribers_count
 
     @classmethod
     def get_service(cls):
