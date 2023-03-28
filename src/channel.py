@@ -56,7 +56,7 @@ class Channel:
         return self.subscribers_count < other.subscribers_count
 
     def __gt__(self, other):
-        return self.subscribers_count > other.subscribers_count  # False
+        return self.subscribers_count > other.subscribers_count
 
     @classmethod
     def get_service(cls):
